@@ -1,5 +1,5 @@
 ==========================================
-Ansible Netcommon Collection Release Notes
+Ansible Network Collection Release Notes
 ==========================================
 
 .. contents:: Topics
