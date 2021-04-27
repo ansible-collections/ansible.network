@@ -1,10 +1,21 @@
 ---
 authors:
   - Ansible Network Community (ansible-network)
+dependencies:
+  - "ansible.netcommon": '*'
+  - "ansible.utils": '*'
+  - "arista.eos": '*'
+  - "cisco.ios": '*'
+  - "cisco.iosxr": '*'
+  - "cisco.nxos": '*'
+  - "junipernetworks.junos": '*'
+  - "openvswitch.openvswitch": '*'
+  - "vyos.vyos": '*'
+  - "frr.frr": '*'
 license_file: LICENSE
 name: ansible
-description: Ansible Network Collection for Arista EOS devices.
-namespace: network
+description: Ansible Network meta Collection to install all network supported content.
+namespace: ansible
 readme: README.md
 repository: https://github.com/ansible-collections/ansible.network
 tags: [networking, security, cloud, network_cli, netconf, httpapi, grpc]
