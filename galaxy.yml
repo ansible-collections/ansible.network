@@ -13,7 +13,7 @@ dependencies:
   - "vyos.vyos": '*'
   - "frr.frr": '*'
 license_file: LICENSE
-name: ansible
+name: network
 description: Ansible Network meta Collection to install all network supported content.
 namespace: ansible
 readme: README.md
