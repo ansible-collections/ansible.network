@@ -1,0 +1,9 @@
+ancestor: null
+releases:
+  1.0.0:
+    changes:
+      release_summary:
+      - Released 1.0.0 with updated changelog.
+    fragments:
+    - test.yaml
+    release_date: '2021-05-18'
