@@ -5,10 +5,13 @@ Ansible Network Collection Release Notes
 .. contents:: Topics
 
 
-v1.0.0
+v1.0.1
 ======
 
 Release Summary
 ---------------
 
-- Released 1.0.0 with updated changelog.
+- Updated README.md and regenerated documentation.
+
+v1.0.0
+======
