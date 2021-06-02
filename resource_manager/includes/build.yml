@@ -1,0 +1,10 @@
+- name: Run the platform facts module
+  action:
+    module: "ansible.netcommon.resource_module"
+    os_name: "{{ ansible_network_os }}"
+    name: "{{ item }}"
+    state: gathered
+  register: result
+
+- include: includes/write_to_file.yaml
+  when: inventory_directory is defined

@@ -1,0 +1,5 @@
+---
+- name: Run the platform facts module
+  action:
+    module: "ansible.netcommon.resource_module"
+    os_name: "{{ ansible_network_os }}"
