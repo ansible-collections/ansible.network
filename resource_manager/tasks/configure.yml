@@ -1,0 +1,97 @@
+---
+- include_tasks: includes/configure.yaml
+  when:
+    - inventory_directory is defined
+
+- name: Run the platform config module
+  ansible.netcommon.network_resource:
+    os_name: "{{ ansible_network_os }}"
+    name: "{{ name }}"
+    config: "{{ config }}"
+    state: "{{ state }}"
+  when:
+    - inventory_directory is not defined
+    - name is defined
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#- name:  Print Variable ^/^/^/
+#  debug:
+#    msg: "{{ ansible_network_os }}_{{ (item.path | basename).split('.') | first  }}"
+#  loop: "{{ found_directories.files }}"
+#  loop_control:
+#    label: "{{ item.path | basename }}"
+#
+#- name: Apply configuration
+#  action:
+#    module: "{{ ansible_network_os }}_{{ (item.path | basename).split('.') | first  }}"
+#    config: "{{ lookup('file', item.path) }}"
+#    # config: "{{ interfaces }}"
+#    state: "{{ state }}"
+#  loop: "{{ found_directories.files }}"
+#  loop_control:
+#    label: "{{ item.path | basename }}"
+
+#
+#
+
+
+#
+#- name: Run the platform facts module
+#  action:
+#    module: "ansible.netcommon.resource_module"
+#    os_name: "{{ ansible_network_os }}"
+#  register: network_resources_list
+#
+#- set_fact:
+#    network_resources: "{{ network_resources_list['modules']|param_list_compare(resources) }}"
+#
+#- include_tasks: includes/build.yml
+#  loop: "{{ network_resources['actionable'] }}"
+#
+#- name: Run the platform facts module
+#  action:
+#    module: "ansible.netcommon.resource_module"
+#    os_name: "{{ ansible_network_os }}"
+#    name: "{{ item }}"
+#    state: gathered
+#  loop: "{{ network_resources['actionable'] }}"
+#
+#

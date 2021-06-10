@@ -1,0 +1,12 @@
+- name: ls -d /tmp/ansible*
+  find:
+    paths: "{{ inventory_directory }}/host_vars/{{ inventory_hostname }}"
+    recurse: no
+    patterns: "*.yaml"
+    file_type: file
+  register: found_directories
+
+- include_tasks: includes/edit_config.yaml
+  loop: "{{ found_directories.files }}"
+  loop_control:
+    label: "{{ item.path | basename }}"
