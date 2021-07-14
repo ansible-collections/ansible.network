@@ -1,0 +1,14 @@
+- hosts: ios
+  gather_facts: no
+  tasks:
+  - name: invoke configure fuctnion
+    include_role:
+      name: resource_manager
+      tasks_from: configure
+    vars:
+      ansible_network_os: cisco.ios.ios
+      resource: interfaces
+      config:
+        - name: "GigabitEthernet0/0"
+          description: "Edited with Configure operation"
+      state: merged
