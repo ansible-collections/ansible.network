@@ -5,14 +5,5 @@
 
   vars:
     ansible_network_os: cisco.ios.ios
-    perform_task: lists
+    perform_task: list
 
-#  - hosts: ios
-#    gather_facts: no
-#    tasks:
-#      - name: invoke list function
-#        include_role:
-#          name: resource_manager
-#        vars:
-#          ansible_network_os: cisco.ios.ios
-#          perform_task: lists
