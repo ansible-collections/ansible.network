@@ -1,0 +1,16 @@
+- hosts: ios
+  gather_facts: no
+  tasks:
+  - name: invoke deploy fuctnion
+    include_role:
+      name: resource_manager
+      tasks_from: deploy
+    vars:
+      inventory_directory: ./inventory
+      ansible_network_os: cisco.ios.ios
+      state: merged
+      resources:
+        - 'interfaces'
+        - '!l2_interfaces'
+        - '!l3_interfaces'
+        - '!all'

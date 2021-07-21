@@ -1,0 +1,14 @@
+- hosts: ios
+  gather_facts: no
+  tasks:
+  - name: invoke persist fuctnion
+    include_role:
+      name: resource_manager
+      tasks_from: persist
+    vars:
+      inventory_directory: ./inventory
+      ansible_network_os: cisco.ios.ios
+      resources:
+        - 'interfaces'
+        - 'l2_interfaces'
+        - 'l3_interfaces'
