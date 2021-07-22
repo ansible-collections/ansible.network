@@ -5,12 +5,5 @@
     include_role:
       name: resource_manager
     vars:
-      inventory_directory: ./inventory
       ansible_network_os: cisco.ios.ios
-      state: merged
-      resources:
-        - 'interfaces'
-        - '!l2_interfaces'
-        - '!l3_interfaces'
-        - '!all'
-      perform_task: deploy
+      perform_task: list

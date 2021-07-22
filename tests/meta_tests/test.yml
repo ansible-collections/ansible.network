@@ -1,9 +1,0 @@
-- hosts: ios
-  gather_facts: no
-  roles:
-  - tests
-
-  vars:
-    ansible_network_os: cisco.ios.ios
-    perform_task: list
-
