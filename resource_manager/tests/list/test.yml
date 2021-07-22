@@ -1,4 +1,0 @@
-- hosts: ios
-  connection: ansible.netcommon.network_cli
-  roles:
-    - list
