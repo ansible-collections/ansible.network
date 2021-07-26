@@ -1,0 +1,9 @@
+[resource]
+10.8.38.76
+
+[resource:vars]
+ansible_network_os=cisco.ios.ios
+ansible_ssh_user=ansible
+ansible_ssh_pass=ansible
+ansible_connection=ansible.netcommon.network_cli
+# ansible_connection=ansible.netcommon.netconf
