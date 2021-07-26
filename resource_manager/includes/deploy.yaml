@@ -2,7 +2,7 @@
 - name: Get list of files
   find:
     paths: "{{ inventory_directory }}/host_vars/{{ inventory_hostname }}"
-    recurse: no
+    recurse: false
     patterns: "*.yaml"
     file_type: file
   register: found_directories

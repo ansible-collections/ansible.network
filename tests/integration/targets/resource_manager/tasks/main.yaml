@@ -4,8 +4,8 @@
     name: resource_manager
     tasks_from: list
   with_first_found:
-  - "list.yaml"
-  - "includes/unsupported_task.yaml"
+    - "list.yaml"
+    - "includes/unsupported_task.yaml"
 
 - name: Run the platform specific gather tests
   include_role:
@@ -15,5 +15,5 @@
     resources:
       - 'interfaces'
   with_first_found:
-     - "gather.yaml"
-     - "includes/unsupported_task.yaml"
+    - "gather.yaml"
+    - "includes/unsupported_task.yaml"
