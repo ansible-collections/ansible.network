@@ -1,3 +1,4 @@
+---
 - name: Gather the supported resource modules
   ansible.netcommon.network_resource:
     os_name: "{{ ansible_network_os }}"
@@ -12,6 +13,3 @@
 
 - include_tasks: includes/build.yml
   loop: "{{ network_resources['actionable'] }}"
-
-
-

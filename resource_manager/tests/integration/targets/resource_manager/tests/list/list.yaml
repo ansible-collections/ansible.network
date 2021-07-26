@@ -38,4 +38,3 @@
           \ == 0 }}"
 
 - debug: msg="START resource manager list on connection={{ ansible_connection }}"
-

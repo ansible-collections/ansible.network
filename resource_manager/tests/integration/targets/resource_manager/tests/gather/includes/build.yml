@@ -1,3 +1,4 @@
+---
 - name: Run the platform facts module
   ansible.netcommon.network_resource:
     os_name: "{{ ansible_network_os }}"

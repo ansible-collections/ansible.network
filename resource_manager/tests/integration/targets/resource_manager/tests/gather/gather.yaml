@@ -3,18 +3,18 @@
 - include_tasks: "includes/remove_config.yaml"
 - set_fact:
     expected_gathered_output:
-    - name: GigabitEthernet0/1
-      description: Configured and Merged by Ansible-Network
-      mtu: 110
-      enabled: true
-      duplex: half
+      - name: GigabitEthernet0/1
+        description: Configured and Merged by Ansible-Network
+        mtu: 110
+        enabled: true
+        duplex: half
 
-    - name: GigabitEthernet0/2
-      description: Configured and Merged by Ansible-Network
-      mtu: 2800
-      enabled: false
-      speed: 100
-      duplex: full
+      - name: GigabitEthernet0/2
+        description: Configured and Merged by Ansible-Network
+        mtu: 2800
+        enabled: false
+        speed: 100
+        duplex: full
 
 - name: Merge provided configuration with device configuration
   register: result
@@ -51,8 +51,7 @@
 
 - include_tasks: "./includes/build.yml"
   loop: "{{ network_resources['actionable'] }}"
-
-#- name: Assert that before dicts are correctly generated
+# - name: Assert that before dicts are correctly generated
 #  assert:
 #    that:
 #      - "{{ result['gathered']['GigabitEthernet0/1'] | symmetric_difference(expected_gathered_output['GigabitEthernet0/1']) | length\

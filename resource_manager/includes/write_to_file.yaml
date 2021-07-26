@@ -1,3 +1,4 @@
+---
 - name: Create inventory directory
   file:
     path: "{{ inventory_directory }}/host_vars/{{ inventory_hostname }}"

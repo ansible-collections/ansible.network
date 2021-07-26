@@ -1,3 +1,4 @@
+---
 - name: Get list of files
   find:
     paths: "{{ inventory_directory }}/host_vars/{{ inventory_hostname }}"
