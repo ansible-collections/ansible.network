@@ -1,19 +1,20 @@
 ---
-- name: Print TBR
-  debug:
-    msg: "list"
+#- name: Run the platform specific list tests
+#  include_role:
+#    name: resource_manager
+#    tasks_from: list
+#  with_first_found:
+#  - "list.yaml"
+#  - "includes/unsupported_task.yaml"
 
-- name: Run the platform specific tasks
+- name: Run the platform specific gather tests
   include_role:
-    name: ansible.network.resource_manager
-  include_tasks: "list.yaml"
+    name: resource_manager
+    tasks_from: gather
+  vars:
+    resources:
+      - 'interfaces'
   with_first_found:
-  - "list.yaml"
+  - "gather.yaml"
   - "includes/unsupported_task.yaml"
 
-#- include: cli.yaml
-#
-#- include: redirection.yaml
-#  when: ansible_version.full is version('2.10.0', '>=')
-#  tags:
-#    - network_cli

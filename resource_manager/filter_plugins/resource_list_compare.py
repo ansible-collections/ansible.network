@@ -40,6 +40,8 @@ ARGSPEC_CONDITIONALS = {}
 
 
 def resource_list_compare(*args, **kwargs):
+    import q
+    q("INSIDE PLUGIN ++++++++++++++++++++++++ ")
     if len(args) < 2:
         raise AnsibleFilterError(
             "Missing either 'base' or 'other value in filter input,"
@@ -87,7 +89,9 @@ def resource_list_compare(*args, **kwargs):
         if entry not in combined:
             combined.append(entry)
     combined.sort()
-    return {'actionable': combined, 'unsupported': unsupported }
+    output = {'actionable': combined, 'unsupported': unsupported}
+    q(output)
+    return output
 
 
 class FilterModule(object):

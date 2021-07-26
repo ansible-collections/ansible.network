@@ -1,4 +1,4 @@
-- name: Get the supported resource modules
+- name: Gather the supported resource modules
   ansible.netcommon.network_resource:
     os_name: "{{ ansible_network_os }}"
   register: network_resources_list

@@ -29,10 +29,6 @@
     os_name: "{{ ansible_network_os }}"
   register: result
 
-- debug:
-    msg: "{{ result }}"
-
-
 - name: Assert the configuration is reflected on host
   assert:
     that:
