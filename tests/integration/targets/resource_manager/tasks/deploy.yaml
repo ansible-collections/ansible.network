@@ -1,7 +1,7 @@
 ---
 - name: collect all test cases
   find:
-    paths: '{{ role_path }}/tests/gather'
+    paths: '{{ role_path }}/tests/deploy'
     patterns: '{{ testcase }}.yaml'
   register: test_cases
   delegate_to: localhost

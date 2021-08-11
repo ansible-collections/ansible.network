@@ -6,7 +6,7 @@
     state: gathered
   register: result
 
-- include: includes/write_to_file.yaml
+- include_tasks: "./write_to_file.yaml"
   when:
     - inventory_directory is defined
     - result["gathered"] != {}

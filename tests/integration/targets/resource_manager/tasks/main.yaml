@@ -1,5 +1,5 @@
 ---
-- name: Run the platform specific list tests
+- name: Run the platform specific list task tests
   include_role:
     name: resource_manager
     tasks_from: list
@@ -7,13 +7,38 @@
     - "list.yaml"
     - "includes/unsupported_task.yaml"
 
-- name: Run the platform specific gather tests
+- name: Run the platform specific gather task tests
   include_role:
     name: resource_manager
     tasks_from: gather
   vars:
     resources:
-      - 'interfaces'
+      - 'lldp_global'
   with_first_found:
     - "gather.yaml"
+    - "includes/unsupported_task.yaml"
+
+- name: Run the platform specific persist task tests
+  include_role:
+    name: resource_manager
+    tasks_from: persist
+  vars:
+    inventory_directory: ./inventory
+    resources:
+      - 'lldp_global'
+  with_first_found:
+    - "persist.yaml"
+    - "includes/unsupported_task.yaml"
+
+- name: Run the platform specific deploy task tests
+  include_role:
+    name: resource_manager
+    tasks_from: deploy
+  vars:
+    inventory_directory: ./inventory
+    resources:
+      - 'lldp_global'
+    state: merged
+  with_first_found:
+    - "deploy.yaml"
     - "includes/unsupported_task.yaml"

@@ -1,0 +1,23 @@
+---
+- set_fact:
+    name: "{{ ansible_network_os }}_{{ (item.path | basename).split('.') | first  }}"
+    resource: "{{ (res.path | basename).split('.') | first  }}"
+    lst: "{{ (res.path | basename).split('.') | first  }}"
+
+- name: Grab the resource facts
+  include_vars:
+    file: "{{ res.path }}"
+    name: module_vars
+
+- include_tasks: './edit_resource.yaml'
+  when:
+    - resources is defined
+
+- name: Apply configuration
+  ansible.netcommon.network_resource:
+    os_name: "{{ ansible_network_os }}"
+    name: "{{ name }}"
+    config: "{{ module_vars[resource] }}"
+    state: "{{ state }}"
+  when:
+    - resources is not defined
