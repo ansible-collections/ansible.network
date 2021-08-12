@@ -85,17 +85,19 @@ collections:
     openvswitch.openvswitch 2.0.0
     vyos.vyos               2.3.0
 
-## Using  platform-agnostic role ansible.network.resource_manager as part of ansible.network collection
+
+## Using  platform-agnostic role ansible.network.resource_manager as part of ansible.network collection.**
 
 This role Provide a single platform agnostics entry point to manage all the resources supported for given network os.
 
 **Capabilities**
+```
 - Use list task to get the list of resource modules supported for a given network os.
 - Use gather task to gather the facts of supported resource modules for a given network os.
 - Use configure task to perform a single operation (e.g merged) for a given network os.
 - Use persis task to fetch the facts and save into inventory host vars files.
 - Use depoy task to push the saved inventory host vars on to the network appliance.
-
+```
 ### Examples
 ##Using list task
 Get the list of resource modules for given ansible_network_os
