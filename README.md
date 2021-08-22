@@ -86,15 +86,15 @@ collections:
     vyos.vyos               2.3.0
 
 
-## Using  platform-agnostic role ansible.network.resource_manager as part of ansible.network collection.**
+## Using the platform-agnostic role ansible.network.resource_manager as part of ansible.network collection.**
 
-This role Provide a single platform agnostics entry point to manage all the resources supported for given network os.
+This role provides a single platform-agnostics entry point to manage all the resources supported for a given network OS.
 
 **Capabilities**
 ```
-- Use list task to get the list of resource modules supported for a given network os.
-- Use gather task to gather the facts of supported resource modules for a given network os.
-- Use configure task to perform a single operation (e.g merged) for a given network os.
+- Use list task to get the list of resource modules supported for a given network OS.
+- Use gather task to gather the facts of supported resource modules for a given network OS.
+- Use configure task to perform a single operation (for example, merged) for a given network OS.
 - Use persis task to fetch the facts and save into inventory host vars files.
 - Use depoy task to push the saved inventory host vars on to the network appliance.
 ```
@@ -122,7 +122,7 @@ run.yml
 - hosts: ios
   gather_facts: no
   tasks:
-  - name: invoke gather fuctnion
+  - name: invoke gather function
     include_role:
       name: resource_manager
     vars:
@@ -141,7 +141,7 @@ run.yml
 - hosts: ios
   gather_facts: no
   tasks:
-  - name: invoke gather fuctnion
+  - name: invoke gather function
     include_role:
       name: resource_manager
     vars:
@@ -161,7 +161,7 @@ run.yml
 - hosts: ios
   gather_facts: no
   tasks:
-  - name: invoke configure fuctnion
+  - name: invoke configure function
     include_role:
       name: resource_manager
     vars:
@@ -181,7 +181,7 @@ run.yml
 - hosts: ios
   gather_facts: no
   tasks:
-  - name: invoke deploy fuctnion
+  - name: invoke deploy function
     include_role:
       name: resource_manager
     vars:

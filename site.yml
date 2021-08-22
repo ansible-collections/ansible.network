@@ -2,7 +2,7 @@
 - hosts: ios
   gather_facts: false
   tasks:
-  - name: invoke gather fuctnion
+  - name: invoke gather function
     include_role:
       name: resource_manager
     vars:

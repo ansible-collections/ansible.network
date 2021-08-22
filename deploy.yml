@@ -2,7 +2,7 @@
 - hosts: ios
   gather_facts: false
   tasks:
-  - name: invoke deploy fuctnion
+  - name: invoke deploy function
     include_role:
       name: resource_manager
       tasks_from: deploy

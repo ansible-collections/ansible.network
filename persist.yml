@@ -2,7 +2,7 @@
 - hosts: ios
   gather_facts: false
   tasks:
-  - name: invoke persist fuctnion
+  - name: invoke persist function
     include_role:
       name: resource_manager
       tasks_from: persist
