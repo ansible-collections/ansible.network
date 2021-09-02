@@ -1,0 +1,8 @@
+---
+- project:
+    templates:
+      - ansible-collections-ansible-network
+      - network-ee-container-image-jobs
+    check:
+      jobs:
+        - network-ee-integration-tests-ansible-network-libssh
