@@ -1,24 +1,36 @@
 ---
 - debug: msg="START resource manager persist on connection={{ ansible_connection }}"
 
+- name: Run the platform specific persist task tests
+  include_role:
+    name: ansible.network.resource_manager
+    tasks_from: persist
+  vars:
+    inventory_directory: ./inventory
+    resources:
+      - 'lldp_global'
+  with_first_found:
+    - "persist.yaml"
+    - "includes/unsupported_task.yaml"
+
 - include_tasks: "includes/remove_config.yaml"
 
 - block:
     - set_fact:
         expected_gathered_output:
-          timer: 20
-          holdtime: 10
-          reinit: 3
-          enabled: true
+          legacy_protocols:
+            - fdp
+            - cdp
+          address: 192.0.2.11
 
     - name: Merge provided configuration with device configuration
       register: result
-      cisco.ios.ios_lldp_global:
+      vyos.vyos.vyos_lldp_global:
         config:
-          holdtime: 10
-          enabled: true
-          reinit: 3
-          timer: 20
+          legacy_protocols:
+            - fdp
+            - cdp
+          address: 192.0.2.11
         state: merged
 
     - name: Get the supported resource modules

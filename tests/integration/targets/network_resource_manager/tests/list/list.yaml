@@ -1,17 +1,23 @@
 ---
 - debug: msg="START resource manager list on connection={{ ansible_connection }}"
 
+- name: Run the platform specific list task tests
+  include_role:
+    name: ansible.network.resource_manager
+    tasks_from: list
+  with_first_found:
+    - "list.yaml"
+    - "includes/unsupported_task.yaml"
+
 - set_fact:
     expected_list_output:
-      - "acl_interfaces"
-      - "acls"
       - "bgp_address_family"
       - "bgp_global"
+      - "firewall_global"
+      - "firewall_interfaces"
+      - "firewall_rules"
       - "interfaces"
-      - "l2_interfaces"
       - "l3_interfaces"
-      - "lacp"
-      - "lacp_interfaces"
       - "lag_interfaces"
       - "lldp_global"
       - "lldp_interfaces"
@@ -22,7 +28,6 @@
       - "prefix_lists"
       - "route_maps"
       - "static_routes"
-      - "vlans"
 
 - name: Run the network resource plugin
   ansible.netcommon.network_resource:
