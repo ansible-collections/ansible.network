@@ -17,19 +17,20 @@
 - block:
     - set_fact:
         expected_gathered_output:
-          legacy_protocols:
-            - fdp
-            - cdp
           address: 192.0.2.11
+          enable: true
+          legacy_protocols:
+            - cdp
+            - fdp
 
     - name: Merge provided configuration with device configuration
       register: result
       vyos.vyos.vyos_lldp_global:
         config:
-          holdtime: 10
-          enabled: true
-          reinit: 3
-          timer: 20
+          legacy_protocols:
+            - fdp
+            - cdp
+          address: 192.0.2.11
         state: merged
 
     - name: Get the supported resource modules

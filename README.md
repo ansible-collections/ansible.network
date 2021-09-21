@@ -84,7 +84,7 @@ collections:
     junipernetworks.junos   2.2.0
     openvswitch.openvswitch 2.0.0
     vyos.vyos               2.3.0
-
+```
 
 ## Using the platform-agnostic role ansible.network.resource_manager as part of ansible.network collection.**
 
@@ -99,7 +99,7 @@ This role provides a single platform-agnostics entry point to manage all the res
 - Use depoy task to push the saved inventory host vars on to the network appliance.
 ```
 ### Examples
-##Using list task
+## Using list task
 Get the list of resource modules for given ansible_network_os
 ```yaml
 run.yml
@@ -114,7 +114,7 @@ run.yml
       ansible_network_os: cisco.ios.ios
       perform_task: list
 ```
-##Using gather task
+## Using gather task
 Get the resource facts for provided resources for given ansible_network_os
 ```yaml
 run.yml
@@ -133,7 +133,7 @@ run.yml
         - 'l2_interfaces'
         - 'l3_interfaces'
 ```
-##Using persist task
+## Using persist task
 Get the resource facts for provided resources and build inventory host_vars for given ansible_network_os
 ```yaml
 run.yml
@@ -153,7 +153,7 @@ run.yml
         - 'l2_interfaces'
         - 'l3_interfaces'
 ```
-##Using config task
+## Using config task
 Invoke single operation for provided resource with provided configuration and state for given ansible_network_os
 ```yaml
 run.yml
@@ -173,7 +173,7 @@ run.yml
           description: "Edited with Configure operation"
       state: merged
 ```
-##Using deploy task
+## Using deploy task
 Perform ansible resource module supported operation with inventory host_vars as provided config for given ansible_network_os.
 ```yaml
 run.yml
