@@ -1,0 +1,10 @@
+---
+- hosts: ios
+  gather_facts: false
+  tasks:
+  - name: invoke list function
+    include_role:
+      name: resource_manager
+      tasks_from: list
+    vars:
+      ansible_network_os: cisco.ios.ios

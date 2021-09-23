@@ -84,7 +84,6 @@ collections:
     junipernetworks.junos   2.2.0
     openvswitch.openvswitch 2.0.0
     vyos.vyos               2.3.0
-```
 
 ### See Also:
 
