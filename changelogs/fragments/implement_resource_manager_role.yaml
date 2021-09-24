@@ -1,3 +1,0 @@
----
-minor_changes:
-  - Add platform agnostic resource manger role (https://github.com/ansible-collections/ansible.network/issues/13).
