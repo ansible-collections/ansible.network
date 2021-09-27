@@ -41,10 +41,12 @@ You can install the ``ansible.network`` collection with the Ansible Galaxy CLI:
 You can also include it in a `requirements.yml` file and install it with `ansible-galaxy collection install -r requirements.yml`, using the format:
 
 ```yaml
+
 ---
 collections:
   - name: ansible.network
 ```
+
 ## Using this collection
 
 **NOTE**: For Ansible 2.9, you may not see deprecation warnings when you run your playbooks with this collection. Use this documentation to track when a module is deprecated.
@@ -84,6 +86,7 @@ collections:
     junipernetworks.junos   2.2.0
     openvswitch.openvswitch 2.0.0
     vyos.vyos               2.3.0
+```
 
 ### See Also:
 
@@ -92,6 +95,7 @@ collections:
 ## Advantage of Using this collection
   The Ansible ``ansible.network`` meta collection gives a single command to install all those
   network content collection dependencies rather than individually listing them.
+
 ## Contributing to this collection
 
 We welcome community contributions to this collection. If you find problems, please open an issue or create a PR against the [ansible.network collection repository](https://github.com/ansible-collections/ansible.network). See [Contributing to Ansible-maintained collections](https://docs.ansible.com/ansible/devel/community/contributing_maintained_collections.html#contributing-maintained-collections) for complete details.
