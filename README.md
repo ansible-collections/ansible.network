@@ -69,7 +69,7 @@ collections:
     Installing 'openvswitch.openvswitch:2.0.0' to '/home/root/.ansible/collections/ansible_collections/openvswitch/openvswitch'
 ```
 
-### List of installed network content collections.**
+### List of installed network content collections.
 ```
     (python37) [root@fedora]$ ansible-galaxy collection list
     /home/root/.ansible/collections/ansible_collections
