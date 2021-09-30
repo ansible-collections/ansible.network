@@ -22,3 +22,11 @@ releases:
     - implement_resource_manager_role.yaml
     - remove_unwanted_files.yaml
     release_date: '2021-09-24'
+  1.2.0:
+    changes:
+      release_summary:
+      - Released 1.1.0 with updated docs.
+    fragments:
+    - fix_readme_file_formatting.yaml
+    - update_docs_release_1_2_0.yaml
+    release_date: '2021-09-30'
