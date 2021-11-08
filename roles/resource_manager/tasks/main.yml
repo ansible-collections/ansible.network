@@ -1,5 +1,5 @@
 ---
-- name: Run the platform  specific tasks
+- name: Run the platform specific tasks
   include_tasks: "./{{ perform_task }}.yaml"
   with_first_found:
   - "{{ perform_task }}.yaml"
