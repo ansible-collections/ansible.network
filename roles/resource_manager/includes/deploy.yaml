@@ -1,7 +1,7 @@
 ---
 - name: Get list of files
   find:
-    paths: "{{ inventory_directory }}/host_vars/{{ inventory_hostname }}"
+    paths: "{{ inventory_directory }}/host_vars/{{ ansible_network_os }}/{{ inventory_hostname }}"
     recurse: false
     patterns: "*.yaml"
     file_type: file
