@@ -1,13 +1,16 @@
 ---
-- name: Get list of hosts
-  find:
-    paths: "{{ inventory_directory }}/host_vars/{{ ansible_network_os }}"
-    recurse: false
-    patterns: "*"
-    file_type: directory
-  register: found_directories
+- set_fact:
+    inventory_directory: "./inventory"
+  when: inventory_directory is undefined
+#- name: Get list of hosts
+#  find:
+#    paths: "{{ inventory_directory }}/host_vars/{{ ansible_network_os }}"
+#    recurse: false
+#    patterns: "*"
+#    file_type: directory
+#  register: found_directories
 
 - include_tasks: includes/deploy.yaml
-  loop: "{{ found_directories.files }}"
-  loop_control:
-    label: "{{ item.path | basename }}"
+#  loop: "{{ found_directories.files }}"
+#  loop_control:
+#    label: "{{ item.path | basename }}"
