@@ -16,6 +16,11 @@ Major Changes
 v1.2.0
 ======
 
+Release Summary
+---------------
+
+- Released 1.2.0 with updated docs.
+
 v1.1.0
 ======
 
@@ -27,5 +32,15 @@ Minor Changes
 v1.0.1
 ======
 
+Release Summary
+---------------
+- Updated README.md and regenerated documentation.
+
 v1.0.0
 ======
+
+Release Summary
+---------------
+
+- Released 1.0.0 with updated changelog.
+
