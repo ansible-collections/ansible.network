@@ -5,6 +5,14 @@ Ansible Network Collection Release Notes
 .. contents:: Topics
 
 
+v2.0.0
+======
+
+Major Changes
+-------------
+
+- The platform agnostic resource_manager role has been moved from this collection to network.base (https://github.com/redhat-cop/network.base).
+
 v1.2.0
 ======
 
@@ -35,3 +43,4 @@ Release Summary
 ---------------
 
 - Released 1.0.0 with updated changelog.
+
