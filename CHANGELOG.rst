@@ -43,4 +43,3 @@ Release Summary
 ---------------
 
 - Released 1.0.0 with updated changelog.
-
