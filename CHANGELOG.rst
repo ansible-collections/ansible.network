@@ -5,11 +5,11 @@ Ansible Network Collection Release Notes
 .. contents:: Topics
 
 
-v2.0.1-dev
+v2.0.1
 ==========
 
-Bugfixes
---------
+Release Summary
+---------------
 
 - Enable GHA workflow and fix ansible-lint issue.
 
