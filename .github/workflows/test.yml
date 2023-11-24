@@ -17,12 +17,12 @@ jobs:
     uses: ansible-network/github_actions/.github/workflows/ansible-lint.yml@main
   changelog:
     uses: ansible-network/github_actions/.github/workflows/changelog.yml@main
+    if: github.event_name == 'pull_request'
   sanity:
     uses: ansible-network/github_actions/.github/workflows/sanity.yml@main
 
-
   all_green:
-    if: ${{ always() && (github.event_name != 'schedule') }}
+    if: ${{ always() }}
     needs:
       - changelog
       - sanity
@@ -30,8 +30,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: >-
-          python -c "assert set([
+          python -c "assert 'failure' not in
+          set([
+          '${{ needs.ansible-lint.result }}',
           '${{ needs.changelog.result }}',
           '${{ needs.sanity.result }}',
-          '${{ needs.ansible-lint.result }}',
-          ]) == {'success'}"
+          ])"
