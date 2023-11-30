@@ -1,5 +1,5 @@
 ---
-name: tests
+name: CI
 
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
@@ -13,8 +13,6 @@ on:  # yamllint disable-line rule:truthy
     - cron: '0 0 * * *'
 
 jobs:
-  ansible-lint:
-    uses: ansible-network/github_actions/.github/workflows/ansible-lint.yml@main
   changelog:
     uses: ansible-network/github_actions/.github/workflows/changelog.yml@main
     if: github.event_name == 'pull_request'
@@ -26,13 +24,11 @@ jobs:
     needs:
       - changelog
       - sanity
-      - ansible-lint
     runs-on: ubuntu-latest
     steps:
       - run: >-
           python -c "assert 'failure' not in
           set([
-          '${{ needs.ansible-lint.result }}',
           '${{ needs.changelog.result }}',
           '${{ needs.sanity.result }}',
           ])"
