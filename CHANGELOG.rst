@@ -4,6 +4,18 @@ Ansible Network Collection Release Notes
 
 .. contents:: Topics
 
+v4.0.0
+======
+
+Release Summary
+---------------
+
+With this release, the minimum required version of `ansible-core` for this collection is `2.15.0`. The last version known to be compatible with `ansible-core` versions below `2.15` is v3.0.0.
+
+Major Changes
+-------------
+
+- Bumping `requires_ansible` to `>=2.15.0`, since previous ansible-core versions are EoL now.
 
 v3.0.0
 ======
@@ -32,7 +44,7 @@ v1.2.0
 Release Summary
 ---------------
 
-- Released 1.2.0 with updated docs.
+Released 1.1.0 with updated docs.
 
 v1.1.0
 ======
@@ -47,7 +59,8 @@ v1.0.1
 
 Release Summary
 ---------------
-- Updated README.md and regenerated documentation.
+
+Updated README.md and regenerated documentation.
 
 v1.0.0
 ======
@@ -55,4 +68,4 @@ v1.0.0
 Release Summary
 ---------------
 
-- Released 1.0.0 with updated changelog.
+Released 1.0.0 with updated changelog.
