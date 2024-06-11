@@ -4,56 +4,58 @@ releases:
     changes:
       release_summary: Released 1.0.0 with updated changelog.
     fragments:
-    - test.yaml
-    release_date: '2021-05-18'
+      - test.yaml
+    release_date: "2021-05-18"
   1.0.1:
     changes:
       release_summary: Updated README.md and regenerated documentation.
     fragments:
-    - 8_readme_update.yaml
-    release_date: '2021-05-24'
+      - 8_readme_update.yaml
+    release_date: "2021-05-24"
   1.1.0:
     changes:
       minor_changes:
-      - Add platform agnostic resource manager role (https://github.com/ansible-collections/ansible.network/issues/13).
+        - Add platform agnostic resource manager role (https://github.com/ansible-collections/ansible.network/issues/13).
     fragments:
-    - implement_resource_manager_role.yaml
-    - remove_unwanted_files.yaml
-    release_date: '2021-09-24'
+      - implement_resource_manager_role.yaml
+      - remove_unwanted_files.yaml
+    release_date: "2021-09-24"
   1.2.0:
     changes:
       release_summary: Released 1.1.0 with updated docs.
     fragments:
-    - fix_readme_file_formatting.yaml
-    - update_docs_release_1_2_0.yaml
-    release_date: '2021-09-30'
+      - fix_readme_file_formatting.yaml
+      - update_docs_release_1_2_0.yaml
+    release_date: "2021-09-30"
   2.0.0:
     changes:
       major_changes:
-      - The platform agnostic resource_manager role has been moved from this collection
-        to network.base (https://github.com/redhat-cop/network.base).
+        - The platform agnostic resource_manager role has been moved from this collection
+          to network.base (https://github.com/redhat-cop/network.base).
     fragments:
-    - release_2_0_0.yml
-    release_date: '2022-11-17'
+      - release_2_0_0.yml
+    release_date: "2022-11-17"
   3.0.0:
     changes:
       major_changes:
-      - Bumping `requires_ansible` to `>=2.14.0`, since previous ansible-core versions
-        are EoL now.
-      release_summary: Starting from this release, the minimum `ansible-core` version
+        - Bumping `requires_ansible` to `>=2.14.0`, since previous ansible-core versions
+          are EoL now.
+      release_summary:
+        Starting from this release, the minimum `ansible-core` version
         this collection requires is `2.14.0`. That last known version compatible with
         ansible-core<2.14 is `v2.0.0`.
     fragments:
-    - update_required_ansible.yaml
-    release_date: '2023-11-30'
+      - update_required_ansible.yaml
+    release_date: "2023-11-30"
   4.0.0:
     changes:
       major_changes:
-      - Bumping `requires_ansible` to `>=2.15.0`, since previous ansible-core versions
-        are EoL now.
-      release_summary: 'With this release, the minimum required version of `ansible-core`
+        - Bumping `requires_ansible` to `>=2.15.0`, since previous ansible-core versions
+          are EoL now.
+      release_summary:
+        "With this release, the minimum required version of `ansible-core`
         for this collection is `2.15.0`. The last version known to be compatible with
-        `ansible-core` versions below `2.15` is v3.0.0.'
+        `ansible-core` versions below `2.15` is v3.0.0."
     fragments:
-    - bump_215.yaml
-    release_date: '2024-06-10'
+      - bump_215.yaml
+    release_date: "2024-06-10"
