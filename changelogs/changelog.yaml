@@ -30,7 +30,8 @@ releases:
   2.0.0:
     changes:
       major_changes:
-        - The platform agnostic resource_manager role has been moved from this collection to network.base (https://github.com/redhat-cop/network.base).
+        - The platform agnostic resource_manager role has been moved from this collection
+          to network.base (https://github.com/redhat-cop/network.base).
     fragments:
       - release_2_0_0.yml
     release_date: "2022-11-17"
@@ -46,3 +47,15 @@ releases:
     fragments:
       - update_required_ansible.yaml
     release_date: "2023-11-30"
+  4.0.0:
+    changes:
+      major_changes:
+        - Bumping `requires_ansible` to `>=2.15.0`, since previous ansible-core versions
+          are EoL now.
+      release_summary:
+        "With this release, the minimum required version of `ansible-core`
+        for this collection is `2.15.0`. The last version known to be compatible with
+        `ansible-core` versions below `2.15` is v3.0.0."
+    fragments:
+      - bump_215.yaml
+    release_date: "2024-06-10"
