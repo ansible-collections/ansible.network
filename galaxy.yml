@@ -9,9 +9,6 @@ dependencies:
   "cisco.iosxr": "*"
   "cisco.nxos": "*"
   "junipernetworks.junos": "*"
-  "openvswitch.openvswitch": "*"
-  "vyos.vyos": "*"
-  "frr.frr": "*"
 license_file: LICENSE
 name: network
 description: Ansible Network meta Collection to install all network supported content.
