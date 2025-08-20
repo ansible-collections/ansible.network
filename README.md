@@ -56,7 +56,6 @@ collections:
     Starting collection install process
     Installing 'ansible.network:1.0.0' to '/home/root/.ansible/collections/ansible_collections/ansible/network'
     Installing 'cisco.ios:2.2.0' to '/home/root/.ansible/collections/ansible_collections/cisco/ios'
-    Installing 'vyos.vyos:2.3.0' to '/home/root/.ansible/collections/ansible_collections/vyos/vyos'
     Installing 'arista.eos:2.1.2' to '/home/root/.ansible/collections/ansible_collections/arista/eos'
     Installing 'cisco.nxos:2.3.0' to '/home/root/.ansible/collections/ansible_collections/cisco/nxos'
     Installing 'cisco.iosxr:2.2.0' to '/home/root/.ansible/collections/ansible_collections/cisco/iosxr'
@@ -112,6 +111,17 @@ Please read and familiarize yourself with this document.
 ## Roadmap
 
 <!-- Optional. Include the roadmap for this collection, and the proposed release/versioning strategy so users can anticipate the upgrade/update cycle. -->
+
+## Support
+
+This collection is maintained by Red Hat Ansible.
+
+As Red Hat Ansible Certified Content, this collection is entitled
+to support through the Ansible Automation Platform (AAP) using the
+**Create issue** button on the top right corner.
+If a support case cannot be opened with Red Hat and the collection
+has been obtained either from Galaxy or GitHub, there may community
+help available on the [Ansible Forum](https://forum.ansible.com/).
 
 ## More information
 
