@@ -57,5 +57,11 @@ releases:
     fragments:
     - bump_215.yaml
     release_date: '2024-06-10'
-  4.1.0:
+  5.0.0:
+    changes:
+      major_changes:
+      - Removing dependencies for deprecated collections frr and vyos which is not
+        supported by Redhat.
+    fragments:
+    - release_5_0_0.yaml
     release_date: '2025-08-20'
