@@ -4,6 +4,10 @@ Ansible Network Collection Release Notes
 
 .. contents:: Topics
 
+
+v4.1.0
+======
+
 v4.0.0
 ======
 
@@ -44,7 +48,7 @@ v1.2.0
 Release Summary
 ---------------
 
-Released 1.2.0 with updated docs.
+Released 1.1.0 with updated docs.
 
 v1.1.0
 ======
