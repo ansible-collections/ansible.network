@@ -13,10 +13,7 @@ The Ansible ``ansible.network`` collection is a meta collection that install all
 - cisco.ios
 - cisco.iosxr
 - cisco.nxos
-- frr.frr
 - junipernetworks.junos
-- openvswitch.openvswitch
-- vyos.vyos
  ```
 
 
@@ -58,7 +55,6 @@ collections:
     Process install dependency map
     Starting collection install process
     Installing 'ansible.network:1.0.0' to '/home/root/.ansible/collections/ansible_collections/ansible/network'
-    Installing 'frr.frr:1.0.3' to '/home/root/.ansible/collections/ansible_collections/frr/frr'
     Installing 'cisco.ios:2.2.0' to '/home/root/.ansible/collections/ansible_collections/cisco/ios'
     Installing 'vyos.vyos:2.3.0' to '/home/root/.ansible/collections/ansible_collections/vyos/vyos'
     Installing 'arista.eos:2.1.2' to '/home/root/.ansible/collections/ansible_collections/arista/eos'
@@ -67,7 +63,6 @@ collections:
     Installing 'ansible.utils:2.2.0' to '/home/root/.ansible/collections/ansible_collections/ansible/utils'
     Installing 'ansible.netcommon:2.1.0' to '/home/root/.ansible/collections/ansible_collections/ansible/netcommon'
     Installing 'junipernetworks.junos:2.2.0' to '/home/root/.ansible/collections/ansible_collections/junipernetworks/junos'
-    Installing 'openvswitch.openvswitch:2.0.0' to '/home/root/.ansible/collections/ansible_collections/openvswitch/openvswitch'
 ```
 
 ### List of installed network content collections.
@@ -83,10 +78,7 @@ collections:
     cisco.ios               2.2.0
     cisco.iosxr             2.2.0
     cisco.nxos              2.3.0
-    frr.frr                 1.0.3
     junipernetworks.junos   2.2.0
-    openvswitch.openvswitch 2.0.0
-    vyos.vyos               2.3.0
 ```
 
 ### See Also:
