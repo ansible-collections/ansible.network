@@ -13,10 +13,7 @@ The Ansible ``ansible.network`` collection is a meta collection that install all
 - cisco.ios
 - cisco.iosxr
 - cisco.nxos
-- frr.frr
 - junipernetworks.junos
-- openvswitch.openvswitch
-- vyos.vyos
  ```
 
 
