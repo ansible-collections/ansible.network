@@ -4,6 +4,15 @@ Ansible Network Collection Release Notes
 
 .. contents:: Topics
 
+
+v5.0.0
+======
+
+Major Changes
+-------------
+
+- Removing dependencies for deprecated collections frr and vyos which is not supported by Redhat.
+
 v4.0.0
 ======
 

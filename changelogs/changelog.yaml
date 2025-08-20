@@ -53,9 +53,17 @@ releases:
         - Bumping `requires_ansible` to `>=2.15.0`, since previous ansible-core versions
           are EoL now.
       release_summary:
-        "With this release, the minimum required version of `ansible-core`
+        With this release, the minimum required version of `ansible-core`
         for this collection is `2.15.0`. The last version known to be compatible with
-        `ansible-core` versions below `2.15` is v3.0.0."
+        `ansible-core` versions below `2.15` is v3.0.0.
     fragments:
       - bump_215.yaml
     release_date: "2024-06-10"
+  5.0.0:
+    changes:
+      major_changes:
+        - Removing dependencies for deprecated collections frr and vyos which is not
+          supported by Redhat.
+    fragments:
+      - release_5_0_0.yaml
+    release_date: "2025-08-20"
